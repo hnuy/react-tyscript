@@ -1,0 +1,39 @@
+/* .auth-wrapper {
+  background-image: url("https://www.teahub.io/photos/full/332-3329460_dota-2-youtube-banner..jpg") !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.auth-inner {
+  width: 90%;
+  height: 80%;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow-y: scroll;
+  padding: 40px 55px 45px 55px;
+} */
+.auth-wrapper {
+  background-image: url("https://www.teahub.io/photos/full/332-3329460_dota-2-youtube-banner..jpg") !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.agi-inner {
+  width: 70%;
+  max-height: 1000px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  background: #ffffff;
+  display: inline-block;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 30px 70px;
+  border-radius: 40px;
+  transition: all 0.3s;
+  overflow-y: scroll;
+  overflow: auto;
+}

@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from "react-router-dom"
 import './App.css';
+import MainApp from "./pages/mainApp/main";
+import Strength from "./pages/strength/heroStr";
+import Agility from "./pages/agility/heroAgi";
+import Intelligent from "./pages/intelligent/heroInt";
+import HeroDetail from "./pages/heroDetail/heroDetail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Route>
+      <Switch>
+        <Route exact path="/" component={MainApp} />
+        <Route path="/main" component={MainApp} />
+        <Route path="/strength" component={Strength} />
+        <Route path="/agility" component={Agility} />
+        <Route path="/intelligent" component={Intelligent} />
+        <Route path="/herodetail" component={HeroDetail} />
+      </Switch>
+    </Route>
   );
 }
 
