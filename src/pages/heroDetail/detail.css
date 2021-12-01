@@ -1,18 +1,40 @@
 .detail-wrapper {
   background-image: url("https://www.teahub.io/photos/full/332-3329460_dota-2-youtube-banner..jpg") !important;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  height: auto;
+  height: 200vh;
 }
 
 .detail-inner {
   width: 50%;
   margin: auto;
-  margin-top: 120px;
   margin-bottom: 20px;
   background: #ffffff;
   border-radius: 30px;
-  overflow: hidden;
-  overflow-y: scroll;
+  /* overflow: auto; */
+  height: auto;
+  margin-top: 100px;
+}
+
+.chart1-inner {
+  width: 40%;
+  display: flex;
+  max-height: 40%;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 30px;
+  margin-top: 25px;
+  overflow: auto;
+}
+
+div .chart2-inner {
+  width: 40%;
+  max-height: 40%;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 30px;
+  margin-top: 25px;
+  overflow: auto;
 }

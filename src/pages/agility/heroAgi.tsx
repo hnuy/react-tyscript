@@ -14,7 +14,6 @@ interface Hero {
     attack?: String;
     roles?: Array<String>;
     primary_attribs?: String;
-
 }
 
 
@@ -27,13 +26,10 @@ const Agility: React.FC<HeroListProps> = () => {
     const [data, setData] = useState<Hero[]>([])
 
     useEffect(() => {
-        // Use [] as second argument in useEffect for not rendering each time
         axios
             .get('https://ggn2tfls3e.execute-api.ap-southeast-1.amazonaws.com/Prod/heroes.json')
-            // .get<Hero[]>('https://ggn2tfls3e.execute-api.ap-southeast-1.amazonaws.com/Prod/heroes.json')
             .then(response => {
-                console.log(response)
-                // setData(response.data.filter(e => e.primary_attribs === "agi"))
+                setData(response.data.body.filter((e: { primary_attribs: String; }) => e.primary_attribs === "agi"))
             }).catch((err) => {
                 throw err
             })
@@ -47,7 +43,7 @@ const Agility: React.FC<HeroListProps> = () => {
                     <img className="rounded-circle" src="https://pbs.twimg.com/media/DcYdDmaVwAAIfYQ?format=jpg&name=medium" alt="holderimage" width="50" height="50" />
                     Agility
                 </h1>
-                {data.map((e, i) => <Cards key={e.name} name={e.name} portrait={e.portrait} id={e.id} ></Cards>)}
+                {data.map((e) => <Cards key={e.name} name={e.name} portrait={e.portrait} id={e.id} ></Cards>)}
             </div>
         </div>
     )

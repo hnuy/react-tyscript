@@ -29,10 +29,9 @@ const Agility: React.FC<HeroListProps> = () => {
     useEffect(() => {
         // Use [] as second argument in useEffect for not rendering each time
         axios
-            .get<Hero[]>('https://peerapongsam.github.io/heropedia/json/english/heroes.json')
-            // .get<Hero[]>('https://ggn2tfls3e.execute-api.ap-southeast-1.amazonaws.com/Prod/heroes.json')
+            .get('https://ggn2tfls3e.execute-api.ap-southeast-1.amazonaws.com/Prod/heroes.json')
             .then(response => {
-                setData(response.data.filter(e => e.primary_attribs === "int"))
+                setData(response.data.body.filter((e: { primary_attribs: String; }) => e.primary_attribs === "int"))
             }).catch((err) => {
                 throw err
             })
